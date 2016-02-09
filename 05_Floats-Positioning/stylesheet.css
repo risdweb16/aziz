@@ -1,0 +1,64 @@
+.bars{
+	width: 60px;
+	height: 400px;
+	background-color: #97FF5A;
+	margin: 0px 30px 0px 10px;
+	float: left; 
+
+}
+.one{
+	margin-top: 100px; 
+	border-radius: 200px 0px 0px 0px;
+
+}
+.two{
+	margin-top: 200px;
+	border-radius: 120px 120px 120px 120px;
+
+
+}
+.three{
+	margin-top: 300px;
+	border-radius: 200px 200px 200px 0px;
+}
+
+.four{
+	margin-top: 400px;
+	border-radius: 0px 200px 200px 200px;
+}
+
+.five{
+	margin-top: 300px;
+	box-shadow: 14px 40px 5px 2px rgba(0,0,0,0.75);
+}
+
+.six{
+	margin-top: 200px;
+	box-shadow: 14px 40px 5px 2px rgba(0,0,0,0.23);
+}
+
+	@media screen and (min-width: 1280px) {
+				.flip-item-wrap{
+				width: 16.6%;
+				}
+			}
+			@media screen and (max-width: 979px) {
+				.flip-item-wrap{
+				width: 33.3%;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.flip-item-wrap{
+				width: 50%;
+				}
+			}
+			@media screen and (max-width: 379px) {
+				.flip-item-wrap{
+				width: 100%;
+				}
+			}
+			 @media only screen and (max-width: 600px) {
+        img {
+            background-image: url("image-small.png");
+        }
+    }

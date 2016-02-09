@@ -1,0 +1,18 @@
+#canvas1{
+	background-color: black;
+	position: absolute;  left:400px; top: 400px;
+	height: 200px;
+	width: 100px;
+}
+#canvas2{
+	background-color: black;
+	position: absolute;  left:200px; top: 150px;
+	height: 200px;
+	width: 200px;
+}
+#canvas2{
+	background-color: black;
+	position: absolute;  left:100px; top: 150px;
+	height: 200px;
+	width: 200px;
+}

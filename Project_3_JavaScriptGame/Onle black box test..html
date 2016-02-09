@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Maze Game</title>
+        <link rel="stylesheet" type="text/css" href="MMazeStylesheet.css">
+    </head>
+    <body id="body">
+        <section>
+            <div>
+                <canvas id="canvas" width="800" height="800"></canvas>
+                <canvas id="canvas1" width="100" height="100"></canvas>
+                <canvas id="canvas2" width="200" height="200"></canvas>
+
+            </div>
+            <script type="text/javascript">
+
+
+                var canvas;  // create canvas
+                var context; // create a contex
+                var dx = 30; // Number of pixels covered per move - Original dx
+                var dy = 30; // Number of pixels covered per move - oRIGINAL dy
+                var x = 750;  // Spawn position on x
+                var y = 750;   // Spawn position on y
+                var WIDTH = 800; // var to cover width === to image width //
+                var HEIGHT = 800; // var to cover height === to image height //
+                var img = new Image(); // var to hold the image //
+
+
+
+                //^ create, then draw rectangle using The rect(), fill() and stroke() method
+
+                function rect(x,y,w,h) { // assign coordiates
+                    context.beginPath();   // to begin a path
+                    context.rect(x,y,w,h); // rect method "only" creates an area of rectangle on canvas not draw it 
+                    context.closePath();   // end path
+                    context.fill();  // color of rectangle UPDATE: placed on a separate function
+                }
+
+
+                function init() { // init() function is a function that starts everything //
+                    canvas = document.getElementById("canvas");
+                    context = canvas.getContext("2d");
+                    return setInterval(drawRectangle, 10);
+                }
+
+
+
+                // event listner; starts when a key is pressed //
+                function moveRectangle(event){
+                    switch (event.keyCode) {
+                        case 38:   // arrow up key 
+                        case 87:  // W key //
+                            if (y - dy > 0){ // checks move, wont move square off of the canvas
+                            y -= dy;
+                            
+                             // everymovment dec the value of y by dy // in this case 5 as coded
+                        }
+                        break;
+                        case 40: // arrow down key
+                        case 83:  // S key
+                            if (y + dy < HEIGHT ){
+                            y += dy;
+                            
+                        }
+                        break;
+
+                        case 37: // arrow left key
+                        case 65:  // A key
+                            if (x - dx > 0){
+                            x -= dx;
+
+                        }
+                        break;
+
+                        case 39: // arrow right key
+                        case 68:  // D key
+                            if (x + dx < WIDTH){
+                            x += dx;
+
+                        }         
+                    }
+                }
+
+
+                var color = prompt("choose a color! RED , BLUE , or GREEN?").toUpperCase();
+
+                switch(color) {
+                  case 'RED':
+                    var BIG =prompt("choose brush size (BIG or SMALL)?").toUpperCase();
+                    if(BIG === 'BIG') {
+                        function drawRectangle(RED) {
+                        context.fillStyle = "red"; 
+                        rect(x, y, 40,40);  
+                        }   
+                    }
+                    break;
+                  case 'BLUE':
+                    var BIGblue =prompt("choose brush size (BIG or SMALL)?").toUpperCase();
+                    if(BIGblue === 'BIG') {
+                        var blue = function drawRectangle(BLUE) {
+                        context.fillStyle = "blue";
+                        rect(x, y, 50,50);  
+                        }
+                    }
+                    break;
+                  case 'GREEN':
+                    var BIGgreen =prompt("choose brush size (BIG or SMALL)?").toUpperCase();
+                    if(BIG === 'BIG' || SMALL === 'SMALL') {
+                          var blue = function drawRectangle(BLUE) {
+                        context.fillStyle = "blue";
+                        rect(x, y, 50,50);  
+                        }
+                    } 
+                    break;
+                  default:
+                    console.log("I didn't understand your choice.");
+                }
+        
+
+
+                init();
+                window.addEventListener('keydown',moveRectangle,true);
+
+            </script>
+        </section>
+    </body>
+</html>

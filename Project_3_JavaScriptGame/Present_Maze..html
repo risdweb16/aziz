@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maze Game</title>
+        <link rel="stylesheet" type="text/css" href="MazeStylesheet.css">
+    </head>
+    <body id="body">
+        <section>
+            <div>
+                <canvas id="canvas" width="595" height="595"></canvas>
+            </div>
+            <script type="text/javascript">
+
+                var canvas;  // create canvas
+                var context; // create a contex
+                var pixPerMove_x = 5; // Number of pixels covered per move - Original dx
+                var pixPerMove_y = 5; // Number of pixels covered per move - oRIGINAL dy
+                var x = 365;  // Spawn position on x
+                var y = 35;   // Spawn position o  yhhffgfh==- n y
+                var WIDTH = 595; // var to cover width === to image width //
+                var HEIGHT = 595; // var to cover height === to image height //
+                var img = new Image(); // var to hold the image //
+                var collision = 0;
+
+
+                //^ these will create, and then draw rectangle using The rect(), fill() and stroke() method
+
+                function rect(x,y,w,h) { // assign coordiates
+                    context.beginPath();   // to begin a path
+                    context.rect(x,y,w,h); // rect method "only" creates an area of rectangle on canvas not draw it 
+                    context.closePath();   // end path
+                    context.fill()  // color of rectangle UPDATE: placed on a separate function
+                }
+
+
+                function drawRectangle() {
+                    clear();  // refresh and or redraw
+                    context.fillStyle = "black"; // color of rectangle
+                    rect(x, y, 25,25);  // size of rectangle 
+                }
+
+
+                function clear() { // places img top left corner of the canvas coordinates in px //
+                    context.clearRect(0, 0, WIDTH, HEIGHT); // function redraws canvas with the maze picture but does not draw square.
+                    context.drawImage(img, 0, 0); // scans the maze picture pixel according and in relation to were the square is located and were the square wants to move.
+                }
+
+                 //^ init() function that starts everything //
+                function init() {
+                    canvas = document.getElementById("canvas"); // ref to canvas id
+                    context = canvas.getContext("2d"); 
+                    img.src = "Maze.gif";  // IMAGE IS PLACED HERE WITH THE STARTING VARIABLE FUNCTION! //
+                    return setInterval(drawRectangle, 10);
+                }
+
+
+                //^ event listner; starts when a key is pressed //
+                function moveRectangle(event){
+                    switch (event.keyCode) {
+                        case 38:   // arrow up key  
+                        case 87:  // W key //
+                            if (y - dy > 0){ // checks move, wont move square off of the canvas
+                            y -= dy;
+                            clear();
+                            checkcollision();
+                            if (collision == 1){
+                            y += dy;
+                            collision = 0;
+                            }
+                            } // to move the square, this will decreases the value of "var y" by "var pixPerMove_y", according to the number of pixels set to square.
+                        }
+                        break;
+                        case 40: // arrow down key
+                        case 83:  // S key
+                            if (y + dy < HEIGHT ){ // 
+                            y += dy;
+                            clear();
+                            checkcollision();
+                            if (collision == 1){
+                            y -= dy;
+                            collision = 0;
+                            }
+                            }
+                        }
+                        break;
+                        case 37: // arrow left key
+                        case 65:  // A key
+                            if (x - dx > 0){
+                            x -= dx;
+                            clear();
+                            checkcollision();
+                            if (collision == 1){
+                            x += dx;
+                            collision = 0;
+                            }
+                            }
+                        }
+                        break;
+                        case 39: // arrow right key
+                        case 68:  // D key
+                            if ((x + dx < WIDTH)){
+                            x += dx;
+                            clear();
+                            checkcollision();
+                            if (collision == 1){
+                            x -= dx;
+                            collision = 0;
+                            }
+                            }
+                        }
+                        break;
+                    }
+                }
+
+                    function checkcollision() {
+                    var imgd = ctx.getImageData(x, y, 15, 15);
+                    var pix = imgd.data;
+                    for (var i = 0; n = pix.length, i < n; i += 4) {
+                    if (pix[i] == 0) {
+                    collision = 1;
+                    }
+                    }
+                    }
+
+                init();
+                window.addEventListener('keydown',moveRectangle,true); // to dispalay the canvas
+
+            </script>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+/*css comments here*/
+body{font-family: 'Lato', sans-serif;}
+
+h3 {
+	margin-top: 1.25em
+}
+
+.highlight {background-color:  }
+
+.steps{background-color: lightblue
+
+
+
+}
+
+.list{
+	border: 20px
+
+
+
+
+}
+.Title{color:lightblue;
+text-align:center;
+ }
+
+ 			@media screen and (min-width: 1280px) {
+				.flip-item-wrap{
+				width: 16.6%;
+				}
+			}
+			@media screen and (max-width: 979px) {
+				.flip-item-wrap{
+				width: 33.3%;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.flip-item-wrap{
+				width: 50%;
+				}
+			}
+			@media screen and (max-width: 379px) {
+				.flip-item-wrap{
+				width: 100%;
+				}
+			}
+			 @media only screen and (max-width: 600px) {
+        img {
+            background-image: url("image-small.png");
+        }
+    }

@@ -1,0 +1,396 @@
+.body{
+	background-color: rgb(22,137,222);
+}
+.circle-1{
+	width: 200px;
+	height: 200px;
+	background: rgb(22,137,222);
+	border-radius: 100px;
+	position: absolute; right:61.5%; top:3%;
+	text-align: center;
+	color: white;
+	opacity: 0.8;
+	
+}
+.circle-2{
+	width: 200px;
+	height: 200px;
+	background: rgb(78,44,120);
+	border-radius: 100px;
+	position: absolute; right:50%; top: 3%;
+	text-align: center;
+	color: white;
+	opacity: 0.8;
+}
+.circle-3{
+	width: 200px;
+	height: 200px;
+	background: rgb(78,44,120);
+	border-radius: 100px;
+	position: absolute; left: 22.25%; top: 35%;
+	text-align: center;
+	color: white;
+	opacity: 0.8;
+
+}
+.circle-4{
+	width: 200px;
+	height: 200px;
+	background: rgb(22,137,222);
+	border-radius: 100px;
+	position: absolute; left: 16.5%; top: 35%;
+	text-align: center;
+	color: white;
+	opacity: 0.8;
+}
+.circle-5{
+	width: 200px;
+	height: 200px;
+	background: rgb(22,137,222);
+	border-radius: 100px;
+	position: absolute;right: 61.5%; top: 35%;
+	text-align: center;
+	color: white;
+	opacity: 0.8;
+}
+.circle-6{
+	width: 200px;
+	height: 200px;
+	background: rgb(78,44,120); 
+	border-radius: 100px;
+	position: absolute;right: 50%; top: 35%;
+	text-align: center;
+	color: white;
+	opacity: 0.8;
+}
+.circle-7{
+	width: 200px;
+	height: 200px;
+	background: rgb(22,137,222);
+	border-radius: 100px;
+	position: absolute;right: 45.5%; top: 35%;
+	text-align: center;
+	color: white;
+	opacity: 0.8;
+}
+.circle-8{
+	width: 200px;
+	height: 200px;
+	background: rgb(78,44,120);
+	border-radius: 100px;
+	position: absolute;right: 50%; top: 57.5%;
+	text-align: center;
+	color: white;
+	opacity: 0.8;
+  z-index: 0;
+}
+
+/*Rectangles*/
+
+.rectangle-1{
+	height: 650px;
+	width: 650px;
+	background: rgb(80,162,235);
+	position: fixed; right: 44.7%;
+	z-index: -1;
+}
+
+.rectangle-2{
+  width: 650px;
+  height: 1.5px;
+  position: absolute; right: 44.7%; top: 24%;
+  background: black;
+  color: black;
+}
+
+.rectangle-3{
+  width: 650px;
+  height: 1.5px;
+  position: absolute; right: 44.7%; top: 34%;
+  background: black;
+  color: black;
+}
+
+.rectangle-4{
+  width: 650px;
+  height: 1px;
+  position: absolute; right: 44.7%; top: 65%;
+  background: black;
+  color: black; 
+}
+
+/*Tiles*/
+
+.title-1{
+  position: absolute; left: 33%; top: 23%;
+}
+
+.title-2{
+ position: absolute; left: 45%; top: 23%; 
+}
+
+/*Texts*/
+
+.text-1{
+ position: absolute; left: 33%; top: 26%;
+ font-size: 10.5px; 
+}
+
+.text-2{
+ position: absolute; left: 33%; top: 29%;
+ font-size: 10.5px; 
+}
+
+.text-3{
+ position: absolute; left: 45%; top: 26%;
+ font-size: 10.5px; 
+}
+
+.text-4{
+  position: absolute; left: 45%; top: 29%;
+  font-size: 10.5px; 
+}
+.text-5{
+  position: absolute; left: 33%; top: 64.5%;
+ font-size: 10.5px; 
+}
+/*hover*/
+
+body section.one div:hover{
+  background: linear-gradient(178deg, #ffffff, #ea6317, #ddd924, #67dd24, #24dd95, #24d3dd, #248add, #5124dd, #9224dd, #dd24be, #dd2424);
+  background-size: 2200% 2200%;
+  animation: AnimationName 1s ease infinite;
+  z-index: 1;
+}
+@keyframes AnimationName { 
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+
+}
+
+body section.two div:hover{
+  color: white;
+  font-size: 15px;
+  z-index: 1;
+  letter-spacing: 5px;
+  animation: pulse 1s infinite;
+}
+  @keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+/* Animation */
+
+.circle-1 {
+	animation: bounceIn 3s;
+}
+@keyframes bounceIn{
+	0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.circle-2 {
+	animation: bounceIn 4s;
+}
+@keyframes bounceIn{
+	0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+} 
+
+.circle-3 {
+	animation: bounceIn 5s;
+}
+@keyframes bounceIn{
+	0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+} 
+
+.circle-4 {
+	animation: bounceIn 2s;
+}
+@keyframes bounceIn{
+	0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+} 
+
+.circle-5 {
+	animation: bounceIn 2s;
+}
+@keyframes bounceIn{
+	0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+} 
+
+.circle-6 {
+	animation: bounceIn 6s;
+}
+@keyframes bounceIn{
+	0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+} 
+
+.circle-7 {
+	animation: bounceIn 4s;
+}
+@keyframes bounceIn{
+	0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+} 
+
+.circle-8 {
+	animation: bounceIn 3s;
+}
+@keyframes bounceIn{
+	0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+}
+
+
+
+.circle-8 {
+ 
+  animation: flash 1000s;
+}
+
+@keyframes flash {
+
+  50% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+
+  50% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+/*position: absolute; left: 22.25%; top: 35%;*/
+
+/*position: absolute;right: 61.5%; top: 35%;*/
+
+
+
+  @media screen and (min-width: 1280px) {
+        .flip-item-wrap{
+        width: 16.6%;
+        }
+      }
+      @media screen and (max-width: 979px) {
+        .flip-item-wrap{
+        width: 33.3%;
+        }
+      }
+      @media screen and (max-width: 639px) {
+        .flip-item-wrap{
+        width: 50%;
+        }
+      }
+      @media screen and (max-width: 379px) {
+        .flip-item-wrap{
+        width: 100%;
+        }
+      }
+       @media only screen and (max-width: 600px) {
+        img {
+            background-image: url("image-small.png");
+        }
+    }

@@ -1,0 +1,95 @@
+.body{
+	background-color: rgb(177,40,48);
+}
+
+.maroon-rect1{   			/*rgb(132,41,46) maroon color */
+	width: 400px;
+	height: 80px;
+	background: rgb(132,41,46);
+	position: absolute; top: 1%; left: 25%; 
+	transform: rotate(-45deg) ;
+
+}
+
+.maroon-rect2{   			/*rgb(132,41,46) maroon color */
+	width: 400px;
+	height: 80px;
+	background: rgb(132,41,46);
+	position: absolute; top: -7.5%; left: 20%; 
+	transform: rotate(-45deg) ;
+}
+
+.maroon-rect3{   			/*rgb(132,41,46) maroon color */
+	width: 400px;
+	height: 80px;
+	background: rgb(132,41,46);
+	position: absolute; top: 30%; left: 40%;
+	transform: rotate(-45deg) ;
+}
+
+.maroon-rect4{   			/*rgb(132,41,46) maroon color */
+	width: 400px;
+	height: 80px;
+	background: rgb(132,41,46);
+	position: absolute; top: 10%; right: 50%;
+	transform: rotate(-45deg) ;
+}
+
+.black-rect1{
+	width: 400px;
+	height: 80px;
+	background: black;
+	position: absolute; top: 30%; right: 50%;
+	transform: rotate(-45deg) ;	
+}
+
+.black-rect2{
+	width: 400px;
+	height: 80px;
+	background: black;
+	position: absolute; top: 50%; right: 39%;
+	transform: rotate(-45deg) ;	
+}
+
+.black-rect3{
+	width: 400px;
+	height: 80px;
+	background: black;
+	position: absolute; top: 60%; right: 34%;
+	transform: rotate(-45deg) ;	
+}
+
+.black-rect4{
+	width: 400px;
+	height: 80px;
+	background: black;
+	position: absolute; top: 70%; right: 29%;
+	transform: rotate(-45deg) ;	
+}
+
+
+	@media screen and (min-width: 1280px) {
+				.flip-item-wrap{
+				width: 16.6%;
+				}
+			}
+			@media screen and (max-width: 979px) {
+				.flip-item-wrap{
+				width: 33.3%;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.flip-item-wrap{
+				width: 50%;
+				}
+			}
+			@media screen and (max-width: 379px) {
+				.flip-item-wrap{
+				width: 100%;
+				}
+			}
+			 @media only screen and (max-width: 600px) {
+        img {
+            background-image: url("image-small.png");
+        }
+    }

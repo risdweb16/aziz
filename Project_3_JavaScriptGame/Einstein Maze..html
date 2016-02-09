@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+	<title>Canvas Maze Game</title>
+</head>
+<body>
+
+<section>
+
+<div>
+<canvas id="canvas" width="476" height="605">
+This text is displayed if your browser does not support HTML5 Canvas.
+</canvas>
+</div>
+
+<script type="text/javascript">
+
+
+var canvas; 
+var ctx;
+var dx = 10;             // Number of pixels covered per move //
+var dy = 10;             // Number of pixels covered per move //
+var x = 50;            // position of rect according to img px //
+var y = 50;              // position of rect according to img px //
+var WIDTH = 476;        // var to cover width === to image width //
+var HEIGHT = 605;       // var to cover height === to image height //
+var img = new Image();  // var to hold the image //
+var collision = 0;      // starting with collidion false //
+
+
+
+
+
+// create then draw rectangle using The rect(), fill() and stroke() method
+
+function rect(x,y,w,h) {
+ctx.beginPath();  // to begin a path
+ctx.rect(x,y,w,h); // rect method to "only" create an area of rectangle on canvas not draw it 
+ctx.closePath(); 
+ctx.fill();
+}
+
+function drawRectangle() {
+clear();
+ctx.fillStyle = "red";  // fill with color
+rect(x, y, 10,10); // size of rect // 
+}
+
+
+
+
+
+
+function clear() {
+ctx.clearRect(0, 0, WIDTH, HEIGHT);
+ctx.drawImage(img, 0, 0); // places img top left corner of the canvas coordinates in px //
+}
+
+
+function init() { // init() function is a function that starts everything //
+canvas = document.getElementById("canvas");
+ctx = canvas.getContext("2d");
+img.src = "Einstein Maze Graphic.gif";  // IMAGE IS PLACED HERE WITH THE STARTING VARIABLE FUNCTION! //
+return setInterval(drawRectangle, 10);
+}
+
+
+
+
+
+// event listner; starts when a key is pressed //
+function moveRectangle(event){
+switch (event.keyCode) {
+case 38:   // arrow up key 
+case 87:  // W key //
+if (y - dy > 0){ // checks makes sure requested move, wont move square off of the canvas (y < 0) //
+y -= dy; // everymovment decreases the value of y by dy // in this case 5 as coded
+clear();
+checkcollision();
+if (collision == 1){
+y += dy;
+collision = 0;
+}
+}
+
+break;
+case 40: // arrow down key
+case 83:  // S key
+if (y + dy < HEIGHT ){
+y += dy;
+clear();
+checkcollision();
+if (collision == 1){
+y -= dy;
+collision = 0;
+}
+}
+
+break;
+case 37: // arrow left key
+case 65:  // A key
+if (x - dx > 0){
+x -= dx;
+clear();
+checkcollision();
+if (collision == 1){
+x += dx;
+collision = 0;
+}
+}
+
+break;
+case 39: // arrow right key
+case 68:  // D key
+if ((x + dx < WIDTH)){
+x += dx;
+clear();
+checkcollision();
+if (collision == 1){
+x -= dx;
+collision = 0;
+}
+}
+
+break;
+}
+}
+
+
+// Collision detector //
+
+function checkcollision() {
+
+var imgd = ctx.getImageData(x, y, 25, 25);  // get image data from a square that covers 25x25
+var pix = imgd.data; // load the data into 1d array //
+
+for (var i = 0; n = pix.length, i < n; i += 4) {
+if (pix[i] == 0) {
+collision = 1;
+}
+}
+}
+
+init();
+window.addEventListener('keydown',moveRectangle,true);
+</script>
+</section>
+</body>
+</html>

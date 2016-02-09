@@ -1,0 +1,169 @@
+/*css comments here*/
+
+ .author{
+ 	position: fixed;top: 2.5%; left: 2%;
+ 	text-align: center;
+ 	letter-spacing: 10px;
+ 	font-size: 15px;
+
+ }
+
+
+ .title{
+	font-size: 50px;
+	
+	color:#696969;
+	padding: 40px;
+  	text-align:center;
+  	position: fixed; top: 1%; 
+  	box-shadow: rgba(0,0,0,0.1) 10px 10px 10px 10px;
+  	 }
+
+ .subtitle{
+ 	text-align: center;
+ 	font-size: 20px;
+ 	color: #696969;
+ 	margin: 60px;
+ 	position: fixed; bottom:15%; 
+ 	 }
+
+ .paragraph{
+	margin: 10px;
+ 	padding: 10px;
+ 	background-color: #696969;
+ 	color: white;
+ 	position: static; left: 50%; 
+ 	 }
+
+ .list{
+	letter-spacing: 10px;
+	position: fixed;top: 22%; left: 5%;
+	background-color:
+	 
+	 }
+
+ .size-title{
+ 	position: absolute;left:50%; top:128%;
+ 	font-size: 17px;
+ 	
+ 	 }
+ .size-txt{
+ 	position: absolute; left:50%; top:130%;
+ 	font-size: 16px; 
+ 	 }
+
+
+
+
+ .weight-title{
+ 	 position: absolute; left:50%; top:145%;
+ 	 font-size: 16px;
+ 	 
+ 	 }	 
+ .weight-txt{
+ 	 position: absolute; left:50%; top:147%;
+ 	 }
+
+
+
+
+ .form-title{
+ 	 position: absolute; left:50%; top:165%;
+ 	 
+ 	 }
+ .form-txt{
+ 	 position: absolute; left:50%; top:167%;
+ 	 }
+
+
+
+
+ .structure-title{
+ 	 position: absolute; left:50%; top:185%;
+ 	
+	 }
+ .structure-txt{
+ 	 position: absolute; left:50%; top:187%;
+ 	 
+ 	 }
+
+
+
+
+ .texture-title{
+ 	 position: absolute; left:50%; top:195%;
+ 	 
+ 	 }
+ .texture-txt{
+ 	 position: absolute; left:50%; top:197%;
+ 	 }
+
+
+
+
+ .color-title{
+ 	 position: absolute; left:50%; top:205%;
+ 	 
+ 	 }
+ .color-txt{
+ 	 position: absolute; left:50%; top:207%;
+ 	 }
+
+
+
+
+ .direction-title{
+ 	 position: absolute; left:50%; top:215%;
+ 	 
+ 	 }
+ .direction-txt{
+ 	 position: absolute; left:50%; top:217%;
+ 	 }
+
+
+
+
+ .other-title{
+ 	 position: absolute; left:50%; top:225%;
+ 	 
+ 	 }
+ .other-txt{
+ 	 position: absolute; left:50%; top:227%;
+ 	 }
+
+
+
+
+ .aziz{
+ 	position: absolute; left:50%; top:320%;
+ 	color: red;
+ 	font-size: 20px;
+ 	font-family: Calibri;
+ }
+
+
+			@media screen and (min-width: 1280px) {
+				.flip-item-wrap{
+				width: 16.6%;
+				}
+			}
+			@media screen and (max-width: 979px) {
+				.flip-item-wrap{
+				width: 33.3%;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.flip-item-wrap{
+				width: 50%;
+				}
+			}
+			@media screen and (max-width: 379px) {
+				.flip-item-wrap{
+				width: 100%;
+				}
+			}
+			 @media only screen and (max-width: 600px) {
+        img {
+            background-image: url("image-small.png");
+        }
+    }
